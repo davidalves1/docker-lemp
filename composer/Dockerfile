@@ -5,7 +5,7 @@ RUN apk --no-cache add git subversion openssh mercurial tini bash patch
 RUN echo "memory_limit=-1" > "$PHP_INI_DIR/conf.d/memory-limit.ini" \
  && echo "date.timezone=${PHP_TIMEZONE:-UTC}" > "$PHP_INI_DIR/conf.d/date_timezone.ini"
 
-RUN apk add --no-cache --virtual .build-deps zlib-dev libicu-dev g++ \
+RUN apk add --no-cache --virtual .build-deps zlib-dev icu-dev g++ \
  && docker-php-ext-install zip intl pdo_mysql \
  && runDeps="$( \
     scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/lib/php/extensions \
