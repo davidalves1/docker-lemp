@@ -20,7 +20,7 @@ php:
 
 composer:
   restart: 'no'
-  image: composer/composer:php7
+  image: composer/composer:latest
   command: install
   volumes:
     - ./html:/app
