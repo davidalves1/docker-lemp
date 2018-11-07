@@ -6,7 +6,7 @@ RUN echo "memory_limit=-1" > "$PHP_INI_DIR/conf.d/memory-limit.ini" \
  && echo "date.timezone=${PHP_TIMEZONE:-UTC}" > "$PHP_INI_DIR/conf.d/date_timezone.ini"
 
 RUN apk add --no-cache --virtual .build-deps zlib-dev icu-dev g++ \
- && docker-php-ext-install zip intl pdo_mysql \
+ && docker-php-ext-install zip intl pdo_mysql gd mcrypt xsl bcmath soap mbstring json hash \
  && runDeps="$( \
     scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/lib/php/extensions \
     | tr ',' '\n' \
