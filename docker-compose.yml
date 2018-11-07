@@ -9,7 +9,7 @@ web:
     - php
 
 php:
-  build: .
+  build: ./php/.
   volumes: 
     - ./html:/code
   environment:
@@ -19,8 +19,8 @@ php:
     # - maildev
 
 composer:
+  build: ./composer/.
   restart: 'no'
-  image: composer/composer:latest
   command: install
   volumes:
     - ./html:/app
