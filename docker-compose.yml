@@ -23,7 +23,7 @@ composer:
   image: composer/composer:php7
   command: install
   volumes:
-- ./html:/app
+    - ./html:/app
 
 mysql:
   image: mysql:5.7
