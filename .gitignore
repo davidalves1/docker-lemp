@@ -1,1 +1,4 @@
 data/
+.phpintel/
+.idea/
+.vscode/
