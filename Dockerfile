@@ -22,3 +22,5 @@ RUN echo "[Date]" >> /usr/local/etc/php/conf.d/php-sendmail.ini \
     && echo "date.timezone = Europe/Amsterdam" >> /usr/local/etc/php/conf.d/php-sendmail.ini
 
 RUN echo "localhost localhost.localdomain" >> /etc/hosts
+
+RUN cd /code && php composer.phar install
