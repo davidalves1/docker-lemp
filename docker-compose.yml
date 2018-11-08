@@ -41,10 +41,10 @@ mysql:
   volumes:
     - ./mysql:/var/lib/mysql
   environment:
-    MYSQL_ROOT_PASSWORD: magnetodb
-    MYSQL_USER: root
-    MYSQL_PASSWORD: admin
-    MYSQL_DATABASE: admin123
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_USER: admin
+    MYSQL_PASSWORD: admin123
+    MYSQL_DATABASE: magnetodb
 
 # phpmyadmin:
 #   image: phpmyadmin/phpmyadmin
