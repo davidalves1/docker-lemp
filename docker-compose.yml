@@ -26,7 +26,7 @@ composer:
     - ./html:/app
 
 mysql:
-  image: mysql:latest
+  image: mariadb:latest
   ports:
     - "3306:3306"
   environment: 
@@ -34,8 +34,6 @@ mysql:
     - MYSQL_ROOT_PASSWORD=root
     - MYSQL_USER=admin
     - MYSQL_PASSWORD=admin123
-  volumes:
-    - "./data/db/mysql:/var/lib/mysql"
 
 # phpmyadmin:
 #   image: phpmyadmin/phpmyadmin
