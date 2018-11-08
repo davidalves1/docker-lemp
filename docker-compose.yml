@@ -28,10 +28,12 @@ composer:
 mysql:
   image: mariadb:latest
   restart: always 
+  volumes:
+      - ./mysql:/var/lib/mysql
   ports:
     - "3306:3306"
   environment: 
     - MYSQL_DATABASE=magnetodb
     - MYSQL_ROOT_PASSWORD=root
     - MYSQL_USER=admin
-    - MYSQL_PASSWORD=admin123
+    - MYSQL_PASSWORD=admin123Z
