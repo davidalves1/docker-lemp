@@ -2,7 +2,7 @@
 
 FROM php:7.1-fpm
 
-RUN apt-get update && apt-get install -q -y ssmtp mailutils zlib1g-dev libicu-dev g++ freetype libpng libjpeg-turbo freetype-dev libpng-dev libjpeg-turbo-dev libmcrypt-dev libltdl libxslt-dev && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -q -y ssmtp mailutils zlib1g-dev libicu-dev g++ libpng-dev libmcrypt-dev libxslt-dev && rm -rf /var/lib/apt/lists/*
 
 RUN docker-php-ext-install pdo_mysql mysqli sysvsem intl zip intl gd mcrypt xsl bcmath soap mbstring json hash soap
 
