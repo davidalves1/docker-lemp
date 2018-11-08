@@ -35,16 +35,16 @@ mysql:
   #   - MYSQL_USER=admin
   #   - MYSQL_PASSWORD=admin123
   image: mariadb
-    restart: always
-    volumes:
-      - ./mysql:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: magnetodb
-      MYSQL_USER: root
-      MYSQL_PASSWORD: admin
-      MYSQL_DATABASE: admin123
-      ports:
-        - "3306:3306"
+  restart: always
+  ports:
+    - "3306:3306"
+  volumes:
+    - ./mysql:/var/lib/mysql
+  environment:
+    MYSQL_ROOT_PASSWORD: magnetodb
+    MYSQL_USER: root
+    MYSQL_PASSWORD: admin
+    MYSQL_DATABASE: admin123
 
 # phpmyadmin:
 #   image: phpmyadmin/phpmyadmin
