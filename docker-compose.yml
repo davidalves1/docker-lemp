@@ -12,6 +12,7 @@ php:
   build: ./php/.
   volumes: 
     - ./html:/code
+    - ./html/php.ini.sample:/usr/local/etc/php/conf.d/php.ini
   environment:
     XDEBUG_CONFIG: remote_host=host.docker.internal
   links:
